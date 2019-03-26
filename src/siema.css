@@ -1,0 +1,25 @@
+.siema {
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.handlers {
+    text-align: center;
+}
+
+.imageActive {
+    border-style: solid !important;
+    border-color: red !important;
+    border-width: 2px !important;
+}
+
+.imageActiveClose {
+    border-style: solid !important;
+    border-color: lime !important;
+    border-width: 1px !important;
+}
+
+.imageActiveFar {
+    filter: blur(3px)
+}
