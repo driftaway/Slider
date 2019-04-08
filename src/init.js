@@ -1,19 +1,18 @@
 function changeStyles() {
     $('p').show()
-    document.querySelector('.js-index').innerHTML = this.currentSlide
     $('.image').removeClass('imageActive')
     $('.image').removeClass('imageActiveClose')
     $('.image').removeClass('imageActiveFar')
-    let centerSlide = '' + this.currentSlide
-    $('.image' + centerSlide).addClass('imageActive')
+    let middleSlide = '' + this.currentSlide
+    $('.image' + middleSlide).addClass('imageActive')
     $('.imageActive').parent().parent().prev('div').children().find('.image').addClass('imageActiveClose')
     $('.imageActive').parent().parent().next('div').children().find('.image').addClass('imageActiveClose')
-    let prev = $('.imageActive').parent().parent().prev('div')
-    let next = $('.imageActive').parent().parent().next('div')
-    $(prev).prev().children().find('.image').addClass('imageActiveFar')
-    $(next).next().children().find('.image').addClass('imageActiveFar')
-    $(prev).prev().children().find('p').hide()
-    $(next).next().children().find('p').hide()
+    let prevSlide = $('.imageActive').parent().parent().prev('div')
+    let nextSlide = $('.imageActive').parent().parent().next('div')
+    $(prevSlide).prev().children().find('.image').addClass('imageActiveFar')
+    $(nextSlide).next().children().find('.image').addClass('imageActiveFar')
+    $(prevSlide).prev().children().find('p').hide()
+    $(nextSlide).next().children().find('p').hide()
 }
 
 const mySiema = new Siema({
